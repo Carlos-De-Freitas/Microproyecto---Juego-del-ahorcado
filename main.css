@@ -1,0 +1,10 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    background-color: #070A17;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
