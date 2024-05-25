@@ -11,13 +11,13 @@
 
     <body>
         <div class="container">
-            <div class="Hangman-box">
-                <img src="images/Hangman-box-cut.png" alt="Hangman-box" width="500" height="500" />
-                <h1>El Juego del Ahorcado</h1>
+            <div class="hangman-box">
+                <img src="images/Hangman-box-cut.png" alt="Hangman-box" width="300" height="300" />
+                <h1>El Juego del Ahorcado </h1>
             </div>
             <div class="game-box">
-                <ul class="Words">
-                    <li class="letter"></li>
+                <ul class="word">
+                    <li class="letter guessed">A</li>
                     <li class="letter"></li>
                     <li class="letter"></li>
                     <li class="letter"></li>
@@ -25,11 +25,15 @@
                     <li class="letter"></li>
                     <li class="letter"></li>
                 </ul>
+                <h4 class="hint"> 
+                    Pista: 
+                    <b>Texto de pista</b>
+                </h4>
                 <h4 class="guesses-text">
                     Incorrect guesses: 
                     <b>0 / 6</b>
                 </h4>
-                <div class="Keyboard">
+                <div class="keyboard">
                     <button>a</button>
                     <button>b</button>
                     <button>c</button>
