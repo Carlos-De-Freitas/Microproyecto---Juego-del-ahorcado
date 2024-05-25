@@ -1,7 +1,10 @@
+const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word");
+const guessesText = document.querySelector(".guesses-text b")
 const keyboardDiv = document.querySelector(".keyboard");
 
-let currentWord;
+let currentWord, wrongGuessCount = 0;
+const maxGuesses = 6;
 
 const getRandomWord = () => {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
@@ -13,10 +16,18 @@ const getRandomWord = () => {
 
 const initGame = (button, clickedLetter) => {
     if(currentWord.includes(clickedLetter)) {
-        console.log(clickedLetter, "existe en la palabra")
+        [...currentWord].forEach((letter, index) => {
+            if(letter === clickedLetter) {
+                wordDisplay.querySelectorAll("li")[index].innerText = letter;
+                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        })
     } else {
-        console.log(clickedLetter, "no existe en la palabra")
+        wrongGuessCount++;
+        hangmanImage.src = `images/Hangman-box.${wrongGuessCount}-cut.png`;
     }
+    button.disabled = true;
+    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 }
 
 for (let i = 97; i <= 122; i++) {
