@@ -1,6 +1,8 @@
 html {
     font-size: 18px;
+    font-style: arial;
 }
+/*Tipo de letra y tamaño de fuente general en el HTMl*/ 
 
 body {
     background-color: #070A17;
@@ -12,6 +14,8 @@ body {
     padding: 0 10px;
 
 }
+/*Características del cuerpo del HTMl*/ 
+
 .container {
     width: 900px;
     background-color: #070A17;
@@ -22,12 +26,16 @@ body {
     border-radius: 20px;
     z-index: 50;
 }
+/*Características del Contenedor General principal de la página: ancho del contenedor, color de fondo, modelo de caja,espacio entre las columnas, alineación de los elementos, espacio entre el contenido y los bordes del contenedor ,radio del borde e index en el eje z */ 
+
 .hangman-box img{ 
     position:relative; top:10px ; left:40px; 
-    max-width: 270px;
-    width: 300px ; 
+    max-width: 280px;
+    width: 280px ; 
     height: 300px; 
 }
+/*Características de la imagen en el contenedor del título de página e imagen del ahorcado: posición relativa a su posición original, anch máximo, ancho y altura*/ 
+
 .hangman-box h1{ 
     font-size: 1.30rem;
     margin-top: 20px;
@@ -35,6 +43,8 @@ body {
     text-transform: uppercase;
     position: relative; right: 10px;
 }
+/*Características del texto h1 (título) en el contenedor del título de página e imagen del ahorcado: tamaño de fuente, margen superior, alineación del texto, transfirmación del texto y posición relativa a su posición original*/
+
 .word { 
     display: flex; 
     gap: 20px; 
@@ -42,35 +52,47 @@ body {
     align-items: center;
     justify-content: center;
 }
+/*Características de la lista de elementos que proporciona los espacios para formar la palabra: modelo de caja, espacio entre columnas, estilo de la lista, alineación de los elementos y justificación del contenido*/
+
 .word .letter{ 
     width: 40px;
     border-bottom: 3px solid #35C6EC; 
     margin-bottom: 35px;
-    position:relative; right: 35px;
+    position:relative; right: 25px;
     font-size: 1.5rem;
     text-align: center;
     font-weight: 300;
     text-transform: uppercase;
-
-
 }
+/*Características de los elementos que conforman la lista de "word", es decir, las letras: ancho, borde inferior, margen inferior, posición relativa a su posición original, tamaño de fuente, alineación del texto, oscuridad y grosor de la fuente y trasnformación del texto. */
+
 .word .letter.guessed{ 
     border-color: transparent;
     margin: -40px 0 35px;
 }
+/*Características de las letras adivinada: color del borde (espacio de la respuesta) y margen*/
+
 .game-box h4{ 
     text-align: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
+/*Características del texto h4 (pista, intentos fallidos y puntaje) en la "Caja de juego": alineación del texto, justificación del contenido, tamaño de fuente,oscuridad y grosor de la fuente y margen inferior. */
+
 .game-box h4 b { 
     font-weight: 900;
+    font-size: 0.9rem;
 }
+/*Características del texto h4 <b> (texto descriptivo de la pista) en la "Caja de juego": oscuridad y grosor de la fuente y tamaño de la fuente. */
+
 .game-box .guesses-text b{ 
-    color: rgb(167, 6, 167)
+    color: rgb(167, 6, 167); 
+    font-weight: 900;
 } 
+/*Características del contador de intentos fallidos: color y oscuridad y grosor de la fuente.  */
+
 .game-box .keyboard{ 
     display: flex;
     gap: 5px; 
@@ -78,16 +100,21 @@ body {
     justify-content: center;
     margin-top: 45px;
 }
+/*Características del teclado interactivo: modelo de caja, espacio entre columnas y filas, dirección del crecimiento del texto al llegar al margen, justificación del contenido, margen superior.   */
+
 .game-box .score-text {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
+/*Características del texto en el contador de puntos: alineación del texto, tamaño de la fuente, oscuridad y grosor de la fuente y margen inferior.  */
 
 .game-box .score-text b {
     font-weight: 900;
 }
+/*Características del contador de puntos: oscuridad y grosor de la fuente.*/
+
 :where(.game-over-screen, .keyboard) button{ 
     color: #35C6EC;
     font-size: 1rem;
@@ -98,18 +125,25 @@ body {
     cursor: pointer;
     background: #0F1628;
 }
+/*Características generales de los botones de la página.*/
+
 .keyboard button { 
     width: calc(100% / 12 - 5px); 
     padding: 7px;
-
 }
+/*Características de los botones del teclado interactivo: ancho y espacio entre el contenido y los bordes del contenedor.*/
+
 .keyboard button:hover{ 
     background-color: black;
 }
+/*Características de los botones del teclado interactivo al colocar el mouse sobre estos: color de fondo.*/
+
 .keyboard button[disabled]{
     opacity: 0.6;
     pointer-events: none;
 }
+/*Características de los botones del teclado interactivo tras ser presionados: opacidad y eventos encadenados al clickear apuntador.*/
+
 .game-over-screen { 
     display: flex;
     position: fixed;
@@ -122,20 +156,25 @@ body {
     z-index: 999;
     left: 0;
     top: 0;
-    z-index: 100;
     justify-content: center;
     align-items: center;
     transition: opacity 0.4s ease;
 }
+/*Características del contenedor de la ventana "Game Over": modelo de caja, posición, fondo, ancho , largo, opacidad, espacio entre el contenido y los bordes del contenedor, eventos encadenados al clickear apuntador, index en el eje z, distancia entre el borde izquierdo del elemento y el borde izquierdo del bloque que lo contiene, distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene, justificación del contenido, alineación de los elementos y transcisión.*/
+
 .content img{ 
     width: 300px;
     height: 300px; 
     margin-bottom: 20px;
 }
+/*Características de la imagen en la ventana "Game Over": ancho, largo y margen inferior.  */
+
 .game-over-screen.show {
     opacity: 1;
     pointer-events: auto;
 }
+/*  */
+
 .game-over-screen .content{ 
     background: white;
     max-width: 450px;
@@ -143,24 +182,33 @@ body {
     text-align: center;
     border-radius: 5px;
     padding: 30px;
-    
 }
+/*Características generales de los elementos que conforman la ventana "Game Over": fondo, ancho máximo, ancho, alineación de texto, radio de los bordes y espacio entre el contenido y los bordes del contenedor. */
+
 .game-over-screen h4{ 
     font-size: 1.5rem;
+    color: #256d7b;
 }
+/*Características del texto h4 (Game Over!) en la ventana de "Game Over": tamaño de fuente y color.*/
+
 .game-over-screen p{ 
-    font-size: 1rem;
-    margin: 15px 0 30px; 
+    font-size: 1.1rem;
+    margin: 15px 0 30px;
+    color: #256d7b; 
 }
+/*Características del párrafo en la ventana "Game Over": tamaño de letra, margen y color.  */
+
 .game-over-screen p b { 
-    font-style: arial;
     color: #070A17
 }
+/*Características de la palabra correcta en la pantalla de "Game Over": color  */
+
 .game-over-screen button{
     font-size: 1.1rem;
     border-radius: 4px;
     padding: 12px 23px;
 }
+/*Características del boton en la ventana de "Game Over":   */
 
 .play-again {
     color: #35C6EC;
@@ -172,12 +220,13 @@ body {
     cursor: pointer;
     background: #0F1628;
     padding: 7px;
-    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
 }
+/*Características del boton de "Jugar de Nuevo" en la pantalla de "Game Over": color, tamaño de fuente, transformación de texto, radio del borde, borde, contorno, cursor, fondo y espacio entre el contenido y el borde del contenedor.  */
 
 .play-again:hover {
     background-color: black;
 }
+/*Características del boton de "Jugar de Nuevo" en la pantalla de "Game Over" al colocar el mouse sobre este: color del fondo.   */
 
 @media (max-width: 782px){ 
     .container {
@@ -192,3 +241,4 @@ body {
         display: none;
     }
 }
+/*Características de la página al cambiar de dispositivo (responsive).*/
