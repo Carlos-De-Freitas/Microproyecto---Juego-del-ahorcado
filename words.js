@@ -1,3 +1,4 @@
+// Lista de palabras con su pista para ser seleccionadas de forma aleatoria
 const wordList = [
     { word: "amigo", hint: "Una persona con la que tienes una relación de afecto y confianza." },
     { word: "avión", hint: "Medio de transporte aéreo." },
