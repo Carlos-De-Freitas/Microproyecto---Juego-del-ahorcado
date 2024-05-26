@@ -78,6 +78,16 @@ body {
     justify-content: center;
     margin-top: 45px;
 }
+.game-box .score-text {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-box .score-text b {
+    font-weight: 900;
+}
 :where(.game-over-screen, .keyboard) button{ 
     color: #35C6EC;
     font-size: 1rem;
@@ -95,6 +105,10 @@ body {
 }
 .keyboard button:hover{ 
     background-color: black;
+}
+.keyboard button[disabled]{
+    opacity: 0.6;
+    pointer-events: none;
 }
 .game-over-screen { 
     display: flex;
@@ -142,10 +156,27 @@ body {
     font-style: arial;
     color: #070A17
 }
-.game-over-screen button{ 
+.game-over-screen button{
     font-size: 1.1rem;
     border-radius: 4px;
     padding: 12px 23px;
+}
+
+.play-again {
+    color: #35C6EC;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 2px solid #35C6EC;
+    outline: none;
+    cursor: pointer;
+    background: #0F1628;
+    padding: 7px;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.play-again:hover {
+    background-color: black;
 }
 
 @media (max-width: 782px){ 
