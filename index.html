@@ -6,26 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Juego del ahorcado</title>
         <link rel="stylesheet" href="main.css" type="text/css">
-        <link rel="icon" href="">
+        <!--enlace al documento CSS para las modificicaciones estéticas de la página-->
+        <link rel="icon" href="images/Hangedman-icon.png" type="image/x-icon">
+        <!--enlace a la carpeta de imágenes para el icono principal de la página-->
         <script src="words.js" defer></script>
+        <!--enlace al documento Js el uso de la lista de palabras-->
         <script src="script.js" defer></script>
+        <!--enlace al documento Js que contiene las funcionalidades de las clases en el html-->
         </head>
-
     <body>
         <div class="game-over-screen">
+            <!--Contenedor de la ventana de "Game Over" que aparece al cumplir los 6 intentos que posee el ususario de adivinar cada letra-->
             <div class="content">
+                <!--Elementos que conforman la pantalla de "Game Over"-->
                 <img src="images/duck-its-over.jpg" alt="It's over">
+                <!--Imagen principal de la pantalla de "Game Over"-->
                 <h4>Game Over!</h4>
                 <p>La palabra correcta era: <b></b></p>
                 <button class="play-again">Jugar de nuevo</button>
+                <!--Botón utilizado para jugar nuevamente tanto si el usuario pierde todos sus intentos, como si logra acertar la palabra-->
             </div>    
         </div>
         <div class="container">
+            <!--Contenedor de los elementos principales de la página -->
             <div class="hangman-box">
+                <!--Contenedor del título de la página e imagen del ahorcado-->
                 <img src="images/Hangman-box.0-cut.png" alt="Hangman-box" width="500" height="500" />
                 <h1>El Juego del Ahorcado</h1>
             </div>
             <div class="game-box">
+                <!--Cotenedor de la "Caja de juego": teclado interactivo, "Bulletpoints" para forma la palabra, pista y puntaje-->
                 <ul class="word"></ul>
                 <h4 class="hint">
                     Pista:
