@@ -41,8 +41,7 @@ const gameOver = (isVictory) => {
         const scoreText = isVictory ? `Tu puntaje es: ${score}` : `Perdiste todos tus puntos. Puntaje: 0`;
         gameModal.querySelector("p").innerHTML += `<br><b id="game-over-score">${scoreText}</b>`;
         gameModal.classList.add("show")
-    }, 300)
-    resetGame(true);
+    }, 1000)
 }
 
 const initGame = (button, clickedLetter) => {
@@ -57,11 +56,10 @@ const initGame = (button, clickedLetter) => {
     } else {
         wrongGuessCount++;
         hangmanImage.src = `images/Hangman-box.${wrongGuessCount}-cut.png`;
+        guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+        if(wrongGuessCount === maxGuesses) return gameOver(false);
     }
     button.disabled = true;
-    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-
-    if(wrongGuessCount === maxGuesses) return gameOver(false);
     if(correctLetters.length === currentWord.length) return gameOver(true);
 }
 
